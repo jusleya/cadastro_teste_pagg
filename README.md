@@ -1,18 +1,16 @@
-# cadastro_cliente_pagg
+# cadastro de cliente paggcerto
 
 > Cadastro de Clientes Pagg
 
-## Build Setup
+## Para Execução do Projeto
 
 ``` bash
-# install dependencies
-npm install
+# Instalar as dependências
+npm install ou yarn
 
-# serve with hot reload at localhost:8080
-npm run dev
+# Execução localhost:8080
+npm run dev ou yarn run dev
 
-# build for production with minification
-npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Em breve mais informações sobre o projeto
