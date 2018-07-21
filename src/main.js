@@ -6,6 +6,7 @@ import App from './App.vue'
 import Header from './components/Header/index.vue'
 //Views
 import Home from './views/Home/index.vue'
+import CadastroEmail from './views/CadastroEmail/index.vue'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
@@ -18,6 +19,14 @@ const routes = [,
     components: {
       header: Header,
       content: Home
+    },
+    props: {header: true, content: false}
+  },
+
+  {path: '/cadastro-email',
+    components: {
+      header: Header,
+      content: CadastroEmail
     },
     props: {header: true, content: false}
   }
