@@ -6,7 +6,8 @@ import App from './App.vue'
 import Header from './components/Header/index.vue'
 //Views
 import Home from './views/Home/index.vue'
-import CadastroEmail from './views/CadastroEmail/index.vue'
+import Cadastro from './views/Cadastro/index.vue'
+import CadastroJuridico from './views/CadastroJuridico/index.vue'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
@@ -23,10 +24,18 @@ const routes = [,
     props: {header: true, content: false}
   },
 
-  {path: '/cadastro-email',
+  {path: '/cadastro',
     components: {
       header: Header,
-      content: CadastroEmail
+      content: Cadastro
+    },
+    props: {header: true, content: false}
+  },
+
+  {path: '/cadastro/juridica',
+    components: {
+      header: Header,
+      content: CadastroJuridico
     },
     props: {header: true, content: false}
   }
