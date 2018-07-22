@@ -5,18 +5,18 @@
         <b-row>
           <b-col cols="6" class="mx-auto">
             <b-form v-if="show">
-              <b-form-group class="label" label-size="Default" label="Nome:" v-model="form.name">
-                <b-form-input size="sm" type="text" />
+              <b-form-group class="label" label-size="Default" label="Nome:">
+                <b-form-input size="sm" type="text" v-model="form.name" />
               </b-form-group>
 
               <b-row>
                 <b-col cols="4">
-                  <b-form-group class="label" label-size="Default" label="CPF:" v-model="form.cpf">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="CPF:">
+                    <b-form-input size="sm" type="text" v-model="form.cpf" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="3">
-                  <b-form-group class="label"  label-size="Default" label="Sexo:">
+                  <b-form-group class="label" label-size="Default" label="Sexo:">
                       <b-form-select size="sm"
                           :options="sex"
                           required
@@ -24,66 +24,66 @@
                   </b-form-group>
                 </b-col>
                 <b-col cols="5">
-                  <b-form-group class="label" label-size="Default" label="Data de nascimento:" v-model="form.date">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Data de nascimento:">
+                    <b-form-input size="sm" type="text" v-model="form.date" />
                   </b-form-group>
                 </b-col>
               </b-row>
 
               <b-row>
                 <b-col cols="9">
-                  <b-form-group class="label" label-size="Default" label="Logradouro:" v-model="form.address">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Logradouro:">
+                    <b-form-input size="sm" type="text" v-model="form.address" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="3">
-                  <b-form-group class="label" label-size="Default" label="Número:" v-model="form.number">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Número:">
+                    <b-form-input size="sm" type="text" v-model="form.number" />
                   </b-form-group>
                 </b-col>
               </b-row>
               
               <b-row>
                 <b-col cols="9">
-                  <b-form-group class="label" label-size="Default" label="Cidade:" v-model="form.city">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Cidade:">
+                    <b-form-input size="sm" type="text" v-model="form.city" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="3">
-                  <b-form-group class="label" label-size="Default" label="Estado:" v-model="form.state">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Estado:">
+                    <b-form-input size="sm" type="text" v-model="form.state" />
                   </b-form-group>
                 </b-col>
               </b-row>
               
               <b-row>
                 <b-col cols="7">
-                  <b-form-group class="label" label-size="Default" label="Complemento:" v-model="form.complement">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Complemento:">
+                    <b-form-input size="sm" type="text" v-model="form.complement" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="5">
-                  <b-form-group class="label" label-size="Default" label="CEP:" v-model="form.cep">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="CEP:">
+                    <b-form-input size="sm" type="text" v-model="form.cep" />
                   </b-form-group>
                 </b-col>
               </b-row>
 
               <b-row>
                 <b-col cols="6">
-                  <b-form-group class="label" label-size="Default" label="Telefone fixo:" v-model="form.phone">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Telefone fixo:">
+                    <b-form-input size="sm" type="text" v-model="form.phone" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="6">
-                  <b-form-group class="label" label-size="Default" label="Telefone celular:" v-model="form.cell">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Telefone celular:">
+                    <b-form-input size="sm" type="text" v-model="form.cell" />
                   </b-form-group>
                 </b-col>
               </b-row>
               
-              <b-form-group class="label" label-size="Default" label="Ramo de atividade:" v-model="form.activity">
-                <b-form-input size="sm" type="text" />
+              <b-form-group class="label" label-size="Default" label="Ramo de atividade:">
+                <b-form-input size="sm" type="text" v-model="form.activity" />
               </b-form-group>
 
               <b-button href="/cadastro/dados-bancarios" variant="primary">Enviar</b-button>

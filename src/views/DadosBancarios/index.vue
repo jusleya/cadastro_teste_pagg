@@ -7,21 +7,21 @@
             <b-form v-if="show">
               <b-row>
                 <b-col cols="5">
-                  <b-form-group class="label" label-size="Default" label="Nome:" v-model="form.name">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Nome:">
+                    <b-form-input size="sm" type="text" v-model="form.name" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="4">
-                  <b-form-group class="label" label-size="Default" label="CPF:" v-model="form.cpf">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="CPF:">
+                    <b-form-input size="sm" type="text" v-model="form.cpf" />
                   </b-form-group>
                 </b-col>
               </b-row>
 
               <b-row>
                 <b-col cols="6">
-                  <b-form-group class="label" label-size="Default" label="Banco:" v-model="form.address">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Banco:">
+                    <b-form-input size="sm" type="text" v-model="form.address" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="6">
@@ -36,31 +36,31 @@
               
               <b-row>
                 <b-col cols="9">
-                  <b-form-group class="label" label-size="Default" label="Cidade:" v-model="form.city">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Cidade:">
+                    <b-form-input size="sm" type="text" v-model="form.city" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="3">
-                  <b-form-group class="label" label-size="Default" label="Estado:" v-model="form.state">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Estado:">
+                    <b-form-input size="sm" type="text" v-model="form.state" />
                   </b-form-group>
                 </b-col>
               </b-row>
               
               <b-row>
                 <b-col cols="3">
-                  <b-form-group class="label" label-size="Default" label="Agência:" v-model="form.address">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Agência:">
+                    <b-form-input size="sm" type="text" v-model="form.address" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="5">
-                  <b-form-group class="label" label-size="Default" label="Conta:" v-model="form.address">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Conta:">
+                    <b-form-input size="sm" type="text" v-model="form.address" />
                   </b-form-group>
                 </b-col>
                 <b-col cols="4">
-                  <b-form-group class="label" label-size="Default" label="Variação:" v-model="form.address">
-                    <b-form-input size="sm" type="text" />
+                  <b-form-group class="label" label-size="Default" label="Variação:">
+                    <b-form-input size="sm" type="text" v-model="form.address" />
                   </b-form-group>
                 </b-col>
               </b-row>
