@@ -30,5 +30,5 @@ export default {
 
 
 <style lang="sass" scoped>
-  @import './css/style.sass'
+  @import '../../assets/css/index.sass'
 </style>
