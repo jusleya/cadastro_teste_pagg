@@ -1,7 +1,4 @@
 # cadastro de cliente paggcerto
-
-> Cadastro de Clientes Pagg
-
 ## Solução
 Este projeto é equivalente ao teste para vaga de Front-end da empresa PaggCerto. Nele foi proposto que fosse desenvolvido uma tela para cadastro de usuários da empresa. Os dados a serem preenchidos dependia do tipo da pessoa (física ou jurídica) e, no fim, ela deveria receber um email para validação de cadastro.
 
