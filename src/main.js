@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import BootstrapVue from "bootstrap-vue"
+import * as firebase from 'firebase'
 import App from './App.vue'
 //Components
 import Header from './components/Header/index.vue'
@@ -64,5 +65,14 @@ const router = new VueRouter({routes, mode: 'history'})
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  render: h => h(App),
+  created() {
+    firebase.initializeApp({
+      apiKey: 'AIzaSyCde3iNMmqr4aaFhU7JtodhXfwFjCIOxOQ',
+      authDomain: 'cadastro-cliente-pagg.firebaseapp.com',
+      databaseURL: 'https://cadastro-cliente-pagg.firebaseio.com',
+      projectId: 'cadastro-cliente-pagg',
+      storageBucket: 'cadastro-cliente-pagg.appspot.com'
+    })
+  }
 })

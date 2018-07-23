@@ -13,7 +13,7 @@
         </b-row>
         <b-row>
           <b-col cols="6" class="mx-auto">
-            <b-form action="#" v-if="show">
+            <b-form v-if="show">
               <b-form-group class="label" label-size="Default" label-for="register" label="Tipo de cadastro*:">
                 <b-form-select size="sm"
                     :options="optRegister"
@@ -24,7 +24,7 @@
                 <b-form-input required size="sm" type="email" v-model="form.email"/>
               </b-form-group>
               <b-form-group class="label" label-size="Default" label-for="cEmail" label="Confirme o email*:">
-                <b-form-input required size="sm" type="email" v-model="form.cEmail" />
+                <b-form-input required size="sm" type="email" v-model="form.cEmail" :state="[compareEmail]" />
               </b-form-group>
               <b-form-group class="label" label-size="Default" label-for="password" label="Senha*:">
                 <b-form-input required size="sm" type="password" v-model="form.password" />
@@ -72,6 +72,10 @@ export default {
     }
   },
   computed: {
+    compareEmail() {
+      return this.form.email != this.form.cEmail ? false : null;
+    },
+
     link() {
       if(this.form.email != '' && this.form.cEmail != '' && this.form.password != '' && this.form.cPassword != '' && this.form.register != null){
         if(this.form.email == this.form.cEmail || this.form.password == this.form.cPassword){
