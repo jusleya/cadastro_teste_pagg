@@ -68,11 +68,6 @@ new Vue({
   render: h => h(App),
   created() {
     firebase.initializeApp({
-      apiKey: 'AIzaSyCde3iNMmqr4aaFhU7JtodhXfwFjCIOxOQ',
-      authDomain: 'cadastro-cliente-pagg.firebaseapp.com',
-      databaseURL: 'https://cadastro-cliente-pagg.firebaseio.com',
-      projectId: 'cadastro-cliente-pagg',
-      storageBucket: 'cadastro-cliente-pagg.appspot.com'
     })
   }
 })
