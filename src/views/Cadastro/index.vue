@@ -50,10 +50,11 @@
               </div>
 
               <input required type="checkbox" label="Checkbox for following text input">
-                Li e aceito os termos de cadastro de cliente</input>
-              
-              <br/>
+                Li e aceito os termos de cadastro de cliente
+              <br>
+
               <b-button
+                class="margin"
                 type="submit"
                 variant="primary">
                   Enviar
@@ -102,20 +103,6 @@ export default {
     compareEmail() {
       return this.form.email != this.form.cEmail ? false : null;
     },
-
-    /*link() {
-      if(this.form.email != '' && this.form.cEmail != '' && this.form.password != '' && this.form.cPassword != '' && this.form.register != null){
-        if(this.form.email == this.form.cEmail || this.form.password == this.form.cPassword){
-          if(this.form.password == this.form.cPassword || this.form.email == this.form.cEmail){
-            if(this.form.register === 'Pessoa física')
-              return '/cadastro/fisica';
-            elseif(this.form.register === 'Pessoa jurídica')
-              return '/cadastro/juridica';
-          }
-        }
-        else return '/cadastro';
-      }
-    }*/
   }
 }
 </script>
