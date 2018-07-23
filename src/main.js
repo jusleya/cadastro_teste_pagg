@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import BootstrapVue from "bootstrap-vue"
-import * as firebase from 'firebase'
 import App from './App.vue'
 //Components
 import Header from './components/Header/index.vue'
