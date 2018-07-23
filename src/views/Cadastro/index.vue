@@ -46,10 +46,14 @@
               <!--Caso seja Pessoa fisica-->
               <div v-else-if="form.register === 'Pessoa jurídica'">
                 <Juridica />
+                <b-form-group class="label" label-size="Default" label="Fazer o cadastro a partir do:">
+                  <input class="vertical-align" type="radio" name="gender" value="male"> CNPJ
+                  <input class="vertical-align" type="radio" name="gender" value="female"> CPF<br>
+                </b-form-group>
                 <Banco />
               </div>
 
-              <input required type="checkbox" label="Checkbox for following text input">
+              <input class="vertical-align" required type="checkbox" label="Checkbox for following text input">
                 Li e aceito os termos de cadastro de cliente
               <br>
 

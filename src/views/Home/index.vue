@@ -9,7 +9,7 @@
         </b-row>
         <b-row>
           <b-col cols="5" class="mx-auto align">
-            <b-button href="/cadastro">Cadastre-se</b-button>
+            <b-button href="/cadastro" variant="primary">Cadastre-se</b-button>
           </b-col>
         </b-row>
       </b-container>
