@@ -6,7 +6,7 @@ A implementação do projeto consiste na criação de formulários com o uso do 
 
 Existem três pastas principais no projeto:
 - assets, onde é encontrado códigos que sejam compartilhados por todos os códigos;
-- omponents, encontra-se os components que são utilizados por todos;
+- components, encontra-se os components que são utilizados por todos;
 - views, que são as telas do projeto.
 
 Cada código no components e views possui uma pasta com nome principal de sua função (por exemplo, para o cabeçalho da página foi utilizado uma pasta com nome Header). Dentro dessas pastas, é possível encontrar um arquivo index.vue e, caso fosse necessário, uma pasta para arquivos css que fossem ser utilizados somente por eles.
