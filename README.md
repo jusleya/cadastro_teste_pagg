@@ -9,7 +9,7 @@ Existem três pastas principais no projeto:
 - omponents, encontra-se os components que são utilizados por todos;
 - views, que são as telas do projeto.
 
-Cada código presente em components e views possui uma pasta com seu nome (por exemplo, Header, referente ao cabeçalho da página). Dentro dessas pastas, é possível encontrar um arquivo index.vue e, caso fosse necessário, uma pasta para arquivos css que fossem ser utilizados somente por eles.
+Cada código no components e views possui uma pasta com nome principal de sua função (por exemplo, para o cabeçalho da página foi utilizado uma pasta com nome Header). Dentro dessas pastas, é possível encontrar um arquivo index.vue e, caso fosse necessário, uma pasta para arquivos css que fossem ser utilizados somente por eles.
 
 
 ## Organização
