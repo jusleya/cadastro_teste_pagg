@@ -39,3 +39,9 @@ yarn
 yarn run dev
 
 ```
+
+## Bibliotecas utilizadas
+Esta aplicação utiliza:
+- VueJs (para construir a interface do app);
+- vuejs-router (auxilia na construção das rotas);
+- BootstrapVue (framework utilizada para interface).
