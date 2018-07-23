@@ -53,7 +53,7 @@
                 <Banco />
               </div>
 
-              <input class="vertical-align" required type="checkbox" label="Checkbox for following text input">
+              <input class="termo vertical-align" required type="checkbox" label="Checkbox for following text input">
                 Li e aceito os termos de cadastro de cliente
               <br>
 
