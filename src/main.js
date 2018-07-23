@@ -8,9 +8,6 @@ import Header from './components/Header/index.vue'
 //Views
 import Home from './views/Home/index.vue'
 import Cadastro from './views/Cadastro/index.vue'
-import CadastroJuridica from './views/CadastroJuridica/index.vue'
-import CadastroFisica from './views/CadastroFisica/index.vue'
-import DadosBancarios from './views/DadosBancarios/index.vue'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
@@ -34,30 +31,6 @@ const routes = [,
     },
     props: {header: true, content: false}
   },
-
-  {path: '/cadastro/juridica',
-    components: {
-      header: Header,
-      content: CadastroJuridica
-    },
-    props: {header: true, content: false}
-  },
-
-  {path: '/cadastro/fisica',
-    components: {
-      header: Header,
-      content: CadastroFisica
-    },
-    props: {header: true, content: false}
-  },
-
-  {path: '/cadastro/dados-bancarios',
-    components: {
-      header: Header,
-      content: DadosBancarios
-    },
-    props: {header: true, content: false}
-  }
 ]
 
 const router = new VueRouter({routes, mode: 'history'})

@@ -36,12 +36,28 @@
                 <b-form-textarea required size="sm" id="text-area" v-model="form.tex">
                 </b-form-textarea>
               </b-form-group>
+
+              <!--Caso seja Pessoa fisica-->
+              <div v-if="form.register === 'Pessoa física'">
+                <Fisica />
+                <Banco />
+              </div>
+
+              <!--Caso seja Pessoa fisica-->
+              <div v-else-if="form.register === 'Pessoa jurídica'">
+                <Juridica />
+                <Banco />
+              </div>
+
+              <input required type="checkbox" label="Checkbox for following text input">
+                Li e aceito os termos de cadastro de cliente</input>
+              
+              <br/>
               <b-button
-                :href="link"
+                type="submit"
                 variant="primary">
                   Enviar
               </b-button>
-              <p v-if="!this.errors">{{errors}}</p>
             </b-form>
           </b-col>
         </b-row>
@@ -51,17 +67,28 @@
 </template>
 
 <script>
+import Banco    from '../DadosBancarios/index.vue';
+import Fisica   from '../CadastroFisica/index.vue';
+import Juridica from '../CadastroJuridica/index.vue';
+
 export default {
   name: 'Cadastro',
+  components: {
+    Banco,
+    Fisica,
+    Juridica
+  },
   data () {
     return {
       form: {
-        email: '',
         cEmail: '',
-        password: '',
+        check: [],
         cPassword: '',
+        email: '',
+        password: '',
+        register: null,
         tex: '',
-        register: null
+        status: 'not_accept'
       },
       optRegister: [
         { text: 'Selecione', value: null },
@@ -76,7 +103,7 @@ export default {
       return this.form.email != this.form.cEmail ? false : null;
     },
 
-    link() {
+    /*link() {
       if(this.form.email != '' && this.form.cEmail != '' && this.form.password != '' && this.form.cPassword != '' && this.form.register != null){
         if(this.form.email == this.form.cEmail || this.form.password == this.form.cPassword){
           if(this.form.password == this.form.cPassword || this.form.email == this.form.cEmail){
@@ -88,7 +115,7 @@ export default {
         }
         else return '/cadastro';
       }
-    }
+    }*/
   }
 }
 </script>
