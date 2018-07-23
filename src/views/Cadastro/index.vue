@@ -13,7 +13,7 @@
         </b-row>
         <b-row>
           <b-col cols="6" class="mx-auto">
-            <b-form v-if="show">
+            <b-form v-if="show" action="enviarEmail.php" method="post">
               <b-form-group class="label" label-size="Default" label-for="register" label="Tipo de cadastro*:">
                 <b-form-select size="sm"
                     :options="optRegister"

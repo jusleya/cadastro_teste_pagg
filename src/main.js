@@ -38,9 +38,5 @@ const router = new VueRouter({routes, mode: 'history'})
 new Vue({
   el: '#app',
   router,
-  render: h => h(App),
-  created() {
-    firebase.initializeApp({
-    })
-  }
+  render: h => h(App)
 })
