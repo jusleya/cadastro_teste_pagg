@@ -41,6 +41,7 @@
                 variant="primary">
                   Enviar
               </b-button>
+              <p v-if="!this.errors">{{errors}}</p>
             </b-form>
           </b-col>
         </b-row>
@@ -66,18 +67,23 @@ export default {
         { text: 'Selecione', value: null },
         'Pessoa física', 'Pessoa jurídica'
       ],
+      errors: [],
       show: true
     }
   },
   computed: {
     link() {
       if(this.form.email != '' && this.form.cEmail != '' && this.form.password != '' && this.form.cPassword != '' && this.form.register != null){
-        if(this.form.register === 'Pessoa física')
-          return '/cadastro/fisica'
-        elseif(this.form.register === 'Pessoa jurídica')
-          return 'cadastro/juridica'
+        if(this.form.email == this.form.cEmail || this.form.password == this.form.cPassword){
+          if(this.form.password == this.form.cPassword || this.form.email == this.form.cEmail){
+            if(this.form.register === 'Pessoa física')
+              return '/cadastro/fisica';
+            elseif(this.form.register === 'Pessoa jurídica')
+              return '/cadastro/juridica';
+          }
+        }
+        else return '/cadastro';
       }
-      else return '/cadastro'
     }
   }
 }

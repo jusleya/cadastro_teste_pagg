@@ -3,21 +3,15 @@
     <b-card-body class="body-padding">
       <b-container>
         <b-row>
+          <b-col cols="6" class="mx-auto align">
+            <p class="p-font">
+              
+            </p>
+          </b-col>
+        </b-row>
+        <b-row>
           <b-col cols="6" class="mx-auto">
             <b-form v-if="show">
-              <b-row>
-                <b-col cols="5">
-                  <b-form-group class="label" label-size="Default" label="Nome:">
-                    <b-form-input size="sm" type="text" v-model="form.name" />
-                  </b-form-group>
-                </b-col>
-                <b-col cols="4">
-                  <b-form-group class="label" label-size="Default" label="CPF:">
-                    <b-form-input size="sm" type="text" v-model="form.cpf" />
-                  </b-form-group>
-                </b-col>
-              </b-row>
-
               <b-row>
                 <b-col cols="6">
                   <b-form-group class="label" label-size="Default" label="Banco:">
