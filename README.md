@@ -28,9 +28,9 @@ Cada código presente em components e views possui uma pasta com seu nome (por e
 
 ``` bash
 # Instalar as dependências
-npm install ou yarn
+yarn
 
 # Execução localhost:8080
-npm run dev ou yarn run dev
+yarn run dev
 
 ```
