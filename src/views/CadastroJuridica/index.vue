@@ -56,12 +56,12 @@
       </b-col>
       <b-col xl="3" lg="3" md="12">
         <b-form-group class="label" label-size="Default" label="Telefone fixo:">
-          <b-form-input size="sm" type="tel" v-model="form.phone" />
+          <b-form-input size="sm" type="number" v-model="form.phone" />
         </b-form-group>
       </b-col>
       <b-col xl="3" lg="3" md="12">
         <b-form-group class="label" label-size="Default" label="Telefone celular*:">
-          <b-form-input required size="sm" type="tel" v-model="form.cell" />
+          <b-form-input required size="sm" type="number" v-model="form.cell" />
         </b-form-group>
       </b-col>
       <b-col xl="3" lg="3" md="12">
