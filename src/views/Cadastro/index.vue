@@ -12,26 +12,39 @@
           </b-col>
         </b-row>
         <b-row>
-          <b-col cols="6" class="mx-auto">
+          <b-col cols="12" class="mx-auto">
             <b-form v-if="show" action="enviarEmail.php" method="post">
-              <b-form-group class="label" label-size="Default" label-for="register" label="Tipo de cadastro*:">
-                <b-form-select size="sm"
-                    :options="optRegister"
-                    required
-                    v-model="form.register"/>
-              </b-form-group>
-              <b-form-group class="label" label-size="Default" label-for="email" label="Email*:">
-                <b-form-input required size="sm" type="email" v-model="form.email"/>
-              </b-form-group>
-              <b-form-group class="label" label-size="Default" label-for="cEmail" label="Confirme o email*:">
-                <b-form-input required size="sm" type="email" v-model="form.cEmail" :state="[compareEmail]" />
-              </b-form-group>
-              <b-form-group class="label" label-size="Default" label-for="password" label="Senha*:">
-                <b-form-input required size="sm" type="password" v-model="form.password" />
-              </b-form-group>
-              <b-form-group class="label" label-size="Default" label-for="cPassword" label="Confirme a senha*:">
-                <b-form-input required size="sm" type="password" v-model="form.cPassword" />
-              </b-form-group>
+              <b-row>
+                <b-col cols="6">
+                  <b-form-group class="label" label-size="Default" label-for="email" label="Email*:">
+                    <b-form-input required size="sm" type="email" v-model="form.email"/>
+                  </b-form-group>
+                </b-col>
+                <b-col cols="6">
+                  <b-form-group class="label" label-size="Default" label-for="cEmail" label="Confirme o email*:">
+                    <b-form-input required size="sm" type="email" v-model="form.cEmail" :state="[compareEmail]" />
+                  </b-form-group>
+                </b-col>
+              </b-row>
+
+              <b-row>
+                <b-col cols="4">
+                  <b-form-group class="label" label-size="Default" label-for="password" label="Senha*:">
+                    <b-form-input required size="sm" type="password" v-model="form.password" />
+                  </b-form-group>
+                </b-col>
+                <b-col cols="4">
+                  <b-form-group class="label" label-size="Default" label-for="cPassword" label="Confirme a senha*:">
+                    <b-form-input required size="sm" type="password" v-model="form.cPassword" />
+                  </b-form-group>
+                </b-col>
+                <b-col cols="4">
+                  <b-form-group class="label" label-size="Default" label-for="register" label="Tipo de cadastro*:">
+                    <b-form-select size="sm" :options="optRegister" required v-model="form.register"/>
+                  </b-form-group>
+                </b-col>
+              </b-row>
+
               <b-form-group class="label" label-size="Default" id="password-group-2" label="Como conheceu a PaggCerto?*">
                 <b-form-textarea required size="sm" id="text-area" v-model="form.tex">
                 </b-form-textarea>
