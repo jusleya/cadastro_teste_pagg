@@ -1,18 +1,20 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import BootstrapVue from "bootstrap-vue"
-import App from './App.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import BootstrapVue from "bootstrap-vue";
+import VueTheMask from "vue-the-mask";
+import App from './App.vue';
 //Components
-import Header from './components/Header/index.vue'
+import Header from './components/Header/index.vue';
 //Views
-import Home from './views/Home/index.vue'
-import Cadastro from './views/Cadastro/index.vue'
+import Home from './views/Home/index.vue';
+import Cadastro from './views/Cadastro/index.vue';
 
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap-vue/dist/bootstrap-vue.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
 
-Vue.use(BootstrapVue)
-Vue.use(VueRouter)
+Vue.use(BootstrapVue);
+Vue.use(VueRouter);
+Vue.use(VueTheMask);
 
 const routes = [,
   {path: '/',

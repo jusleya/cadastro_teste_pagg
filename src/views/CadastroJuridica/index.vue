@@ -44,9 +44,10 @@
       <b-col xl="3" lg="3" md="12">
         <b-form-group class="label" label-size="Default" label="Estado*:">
           <b-form-select size="sm"
-                :options="optState"
-                required
-                v-model="form.state"/>
+            :options="optState"
+            required
+            v-model="form.state"
+          />
         </b-form-group>
       </b-col>
       <b-col xl="3" lg="3" md="12">
@@ -55,13 +56,13 @@
         </b-form-group>
       </b-col>
       <b-col xl="3" lg="3" md="12">
-        <b-form-group class="label" label-size="Default" label="Telefone fixo:">
-          <b-form-input size="sm" type="number" v-model="form.phone" />
+        <b-form-group class="label" label-size="Default" label="Telefone celular*:">
+          <TheMask :mask="['(##) # ####-####']" v-model="form.cell" />
         </b-form-group>
       </b-col>
       <b-col xl="3" lg="3" md="12">
-        <b-form-group class="label" label-size="Default" label="Telefone celular*:">
-          <b-form-input required size="sm" type="number" v-model="form.cell" />
+        <b-form-group class="label" label-size="Default" label="Telefone fixo:">
+          <TheMask :mask="['(##) # ####-####']" v-model="form.phone" />
         </b-form-group>
       </b-col>
       <b-col xl="3" lg="3" md="12">
@@ -81,15 +82,16 @@
       </b-col>
       <b-col xl="3" lg="3" md="12">
         <b-form-group class="label" label-size="Default" label="CPF*:">
-          <b-form-input required size="sm" type="number" v-model="form.cpf" />
+          <TheMask :mask="['###.###.###-##']" v-model="form.cpf"/>
         </b-form-group>
       </b-col>
       <b-col xl="2" lg="2" md="12">
         <b-form-group class="label"  label-size="Default" label="Sexo*:">
             <b-form-select size="sm"
-                :options="optSex"
-                required
-                v-model="form.sex"/>
+              :options="optSex"
+              required
+              v-model="form.sex"
+            />
         </b-form-group>
       </b-col>
       <b-col xl="2" lg="2" md="12">

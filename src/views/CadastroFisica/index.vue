@@ -8,15 +8,16 @@
       </b-col>
       <b-col xl="3" lg="3" md="12">
         <b-form-group class="label" label-size="Default" label="CPF*:">
-          <b-form-input required size="sm" type="number" v-model="form.cpf" />
+          <TheMask :mask="['###.###.###-##']" v-model="form.cpf"/>
         </b-form-group>
       </b-col>
       <b-col xl="2" lg="2" md="12">
         <b-form-group class="label" label-size="Default" label="Sexo*:">
             <b-form-select size="sm"
-                :options="optSex"
-                required
-                v-model="form.sex"/>
+              :options="optSex"
+              required
+              v-model="form.sex"
+            />
         </b-form-group>
       </b-col>
       <b-col xl="2" lg="2" md="12">
@@ -52,9 +53,10 @@
       <b-col xl="3" lg="3" md="12">
         <b-form-group class="label" label-size="Default" label="Estado*:">
           <b-form-select size="sm"
-                :options="optState"
-                required
-                v-model="form.state"/>
+            :options="optState"
+            required
+            v-model="form.state"
+          />
         </b-form-group>
       </b-col>
       <b-col xl="3" lg="3" md="12">
@@ -63,13 +65,13 @@
         </b-form-group>
       </b-col>
       <b-col xl="4" lg="4" md="12">
-        <b-form-group class="label" label-size="Default" label="Telefone fixo:">
-          <b-form-input size="sm" type="number" v-model="form.phone" />
+        <b-form-group class="label" label-size="Default" label="Telefone celular*:">
+          <TheMask :mask="['(##) # ####-####']" v-model="form.cell" />
         </b-form-group>
       </b-col>
       <b-col xl="4" lg="4" md="12">
-        <b-form-group class="label" label-size="Default" label="Telefone celular*:">
-          <b-form-input required size="sm" type="number" v-model="form.cell" />
+        <b-form-group class="label" label-size="Default" label="Telefone fixo:">
+          <TheMask :mask="['(##) # ####-####']" v-model="form.phone" />
         </b-form-group>
       </b-col>
       <b-col xl="4" lg="4" md="12">
@@ -82,8 +84,12 @@
 </template>
 
 <script>
+import {TheMask} from 'vue-the-mask';
+
 export default {
-    name: 'CadastroFisica',
+  name: 'CadastroFisica',
+  components: {TheMask},
+
   data () {
     return {
       form: {
@@ -119,10 +125,10 @@ export default {
   },
   computed: {
     link() {
-      if(this.form.address != '' && this.form.number != '' && this.form.city != '' &&
-        this.form.state != null && this.form.cep != '' && this.form.phone != '' &&
-        this.form.activity != '' && this.form.name != '' && this.form.cpf != '' &&
-        this.form.sex != null && this.form.date != ''){
+      if(this.form.address !== '' && this.form.number !== '' && this.form.city !== '' &&
+        this.form.state !== null && this.form.cep !== '' && this.form.phone !== '' &&
+        this.form.activity !== '' && this.form.name !== '' && this.form.cpf !== '' &&
+        this.form.sex !== null && this.form.date !== ''){
         return '/cadastro/dados-bancarios'
       }
       else return '/cadastro/fisica'
