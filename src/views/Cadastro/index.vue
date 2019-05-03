@@ -13,7 +13,7 @@
         </b-row>
         <b-row>
           <b-col xl="12" lg="12" md="12" class="mx-auto">
-            <b-form v-if="show" action="enviarEmail.php" method="post">
+            <b-form v-if="show" action="enviarEmail.php" method="post" @submit="checkForm">
               <b-row>
                 <b-col xl="6" lg="6" md="12">
                   <b-form-group class="label" label-size="Default" label-for="email" label="Email*:">
@@ -35,7 +35,7 @@
                 </b-col>
                 <b-col xl="4" lg="4" md="12">
                   <b-form-group class="label" label-size="Default" label-for="cPassword" label="Confirme a senha*:">
-                    <b-form-input required size="sm" type="password" v-model="form.cPassword" />
+                    <b-form-input required size="sm" type="password" v-model="form.cPassword" :state="[compareSenha]" />
                   </b-form-group>
                 </b-col>
                 <b-col xl="4" lg="4" md="12">
@@ -69,7 +69,12 @@
               <input class="termo vertical-align" required type="checkbox" label="Checkbox for following text input">
                 Li e aceito os termos de cadastro de cliente
               <br>
-
+              <p v-if="errors.length">
+                <b>Por favor, corrija o(s) seguinte(s) erro(s):</b>
+                <ul>
+                  <li v-bind:keyv-for="error in errors">{{ error }}</li>
+                </ul>
+              </p>
               <b-button
                 class="margin"
                 type="submit"
@@ -120,6 +125,21 @@ export default {
     compareEmail() {
       return this.form.email != this.form.cEmail ? false : null;
     },
+    compareSenha() {
+      return this.form.password != this.form.cPassword ? false : null;
+    }
+  },
+  methods: {
+    checkForm:  function (e) {
+      if (!this.validEmail(this.email)) {
+        this.errors.push('Utilize um e-mail válido.');
+      }
+      e.preventDefault();
+    },
+    validEmail: function (email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
   }
 }
 </script>

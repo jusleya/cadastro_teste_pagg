@@ -25,7 +25,7 @@
           <b-form-input required size="sm" type="date" v-model="form.date" />
         </b-form-group>
       </b-col>
-      <b-col xl="3" lg="3" md="12">
+      <b-col xl="2" lg="2" md="12">
         <b-form-group class="label" label-size="Default" label="CEP*:">
           <b-form-input required size="sm" type="number" v-model="form.cep" />
         </b-form-group>
@@ -35,7 +35,7 @@
           <b-form-input size="sm" type="number" v-model="form.bairro" />
         </b-form-group>
       </b-col>
-      <b-col xl="6" lg="6" md="12">
+      <b-col xl="7" lg="7" md="12">
         <b-form-group class="label" label-size="Default" label="Endereço*:">
           <b-form-input required size="sm" type="text" v-model="form.address" />
         </b-form-group>
